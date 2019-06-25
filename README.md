@@ -33,7 +33,7 @@
 
 ## OneToOne
 
-描述实体`UserDO`和`AccountDO`的一对一的双向关联关系；例如：一个用户只能拥有一个账号。
+描述实体`UserDO`和`AccountDO`的一对一的关联关系；例如：一个用户只能拥有一个账号。
 ---
 
 ## ManyToOne
@@ -42,5 +42,5 @@
 ---
 
 ## ManyToMany
-描述实体`ClientDO`和`BankDO`的多对多的关联关系；例如：银行A拥有客户甲乙丙，银行B拥有甲乙丁。
+描述实体`ClientDO`和`BankDO`的多对多的关联关系；例如：银行A拥有客户甲乙丙，银行B拥有客户甲乙丁。
 ---
