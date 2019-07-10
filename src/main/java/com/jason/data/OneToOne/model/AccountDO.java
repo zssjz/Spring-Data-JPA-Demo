@@ -1,6 +1,7 @@
 package com.jason.data.OneToOne.model;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
 
 import javax.persistence.*;
 
@@ -25,7 +26,7 @@ public class AccountDO {
     private String password;
 
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.REFRESH})
-    @JoinColumn(name = "USER_ID")
+    @PrimaryKeyJoinColumn
     private UserDO userDO;
 
     public String getAccountId() {

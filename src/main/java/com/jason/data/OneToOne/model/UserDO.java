@@ -1,6 +1,7 @@
 package com.jason.data.OneToOne.model;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
 
 import javax.persistence.*;
 
@@ -13,7 +14,7 @@ import javax.persistence.*;
 public class UserDO {
 
     @Id
-    @GenericGenerator(name = "idGenerator", strategy = "uuid")
+    @GenericGenerator(name = "idGenerator", strategy = "foreign", parameters = @Parameter(name = "property", value = "accountDO"))
     @GeneratedValue(generator = "idGenerator")
     @Column(name = "USER_ID", length = 32)
     private String userId;

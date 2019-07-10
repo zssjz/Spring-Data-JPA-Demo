@@ -46,7 +46,7 @@ public class AccountServiceImplTest {
      */
     @Test
     public void deleteAccount() {
-        repository.deleteById("402880fe6b7a6548016b7a6563310000");
+        repository.deleteById("402880ec6bdbf5cc016bdbf5e3660000");
     }
 
     /**
@@ -57,12 +57,12 @@ public class AccountServiceImplTest {
 //        AccountDO accountDO = repository.getOne("402880fe6b7a6548016b7a6563310000");
 //        System.out.println(accountDO);
         Optional<AccountDO> optional = repository.findById("402880fe6b7a6548016b7a6563310000");
-        System.out.println(optional);
+        System.out.println(optional.get());
 //        AccountDO accountDO = new AccountDO();
 //        accountDO.setAccountId("402880fe6b7a6548016b7a6563310000");
 //        Example<AccountDO> example = Example.of(accountDO);
 //        Optional<AccountDO> optional = repository.findOne(example);
-//        System.out.println(optional);
+//        System.out.println(optional.get());
     }
 
     @Test
